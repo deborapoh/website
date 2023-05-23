@@ -13,7 +13,7 @@ const SubTitle = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.main,
 }))
 
-export default function Home() {
+export default function Projects() {
   return (
     <main>
       <Box px={11.5} pt={6}>
