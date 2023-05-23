@@ -7,3 +7,22 @@ export const darkTheme = createTheme({
     mode: 'dark',
   },
 })
+
+export const lightTheme = createTheme({
+  typography: {
+    fontFamily: "HannotateSC, sans-serif",
+  },
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#681EC7',
+    },
+    secondary: {
+      main: '#B686FF',
+    },
+    common: {
+      white: '#FFFFFF',
+      black: '#4E4E4E',
+    },
+  },
+})
