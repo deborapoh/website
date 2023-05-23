@@ -23,7 +23,6 @@ const Header = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  // border: '1px solid black',
   paddingInline: 92,
   height: 144,
   width: '100%',
