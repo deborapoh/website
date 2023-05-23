@@ -2,24 +2,41 @@
 
 import { Box, Typography, styled } from "@mui/material"
 
-const Title = styled(Typography)(({ theme }) => ({
-  fontWeight: 'bold',
-  fontSize: 60,
-  color: theme.palette.common.black,
+const Container = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-end',
+  alignItems: 'flex-end',
+  height: 'calc(100vh - 144px)',
+  paddingInline: 92,
+  paddingBottom: 88,
 }))
 
-const SubTitle = styled(Typography)(({ theme }) => ({
-  fontSize: 45,
-  color: theme.palette.secondary.main,
+const Title = styled(Typography)(({ theme }) => ({
+  fontSize: 64,
+  color: theme.palette.common.black,
+  marginBottom: 56,
+}))
+
+const Body = styled(Typography)(({ theme }) => ({
+  fontSize: 32,
+  color: theme.palette.common.black,
+  width: 765,
+  textAlign: 'end',
 }))
 
 export default function Contact() {
   return (
     <main>
-      <Box px={11.5} pt={6}>
-        <Title>Debora de Oliveira</Title>
-        <SubTitle>{'< developer >'}</SubTitle>
-      </Box>
+      <Container>
+        <Title>Personal Info</Title>
+        <Body>
+        Email: <br />
+        deborapoh@gmail.com <br /><br />
+        Linkedin: <br />
+        linkedin.com/in/deborapoh
+        </Body>
+      </Container>
     </main>
   )
 }
