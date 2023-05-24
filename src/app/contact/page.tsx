@@ -33,8 +33,8 @@ export default function Contact() {
         <Body>
         Email: <br />
         deborapoh@gmail.com <br /><br />
-        Linkedin: <br />
-        linkedin.com/in/deborapoh
+        WhatsApp: <br />
+        (47) 99142-7504
         </Body>
       </Container>
     </main>

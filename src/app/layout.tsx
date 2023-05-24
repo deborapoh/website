@@ -40,7 +40,7 @@ const PagesContainer = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  width: 970,
+  width: 920, // 970
 }))
 
 export default function RootLayout({
@@ -97,7 +97,7 @@ export default function RootLayout({
                   <PageRouteButton pathname='/resume'>Resume</PageRouteButton>
                   <PageRouteButton pathname='/projects'>Projects</PageRouteButton>
                   <PageRouteButton pathname='/contact'>Contact</PageRouteButton>
-                  <LanguageMenu>
+                  {/* <LanguageMenu>
                     <Image
                       className=""
                       src={languageGlobe}
@@ -110,7 +110,7 @@ export default function RootLayout({
                         width: 50,
                       }}
                     />
-                  </LanguageMenu>
+                  </LanguageMenu> */}
                 </PagesContainer>
               </Header>
               {children}
