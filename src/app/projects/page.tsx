@@ -1,25 +1,36 @@
 'use client'
 
-import { Box, Typography, styled } from "@mui/material"
+import { Box, Link, Typography, styled } from "@mui/material"
+import ProjectCard from "../components/ProjectCard"
 
-const Title = styled(Typography)(({ theme }) => ({
-  fontWeight: 'bold',
-  fontSize: 60,
-  color: theme.palette.common.black,
-}))
+import projects from '../projects.json'
 
-const SubTitle = styled(Typography)(({ theme }) => ({
-  fontSize: 45,
-  color: theme.palette.secondary.main,
+const Container = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
+  height: 'calc(100vh - 144px)',
+  paddingInline: 92,
+  paddingBlock: 88,
+  overflowY: 'scroll',
 }))
 
 export default function Projects() {
   return (
     <main>
-      <Box px={11.5} pt={6}>
-        <Title>Debora de Oliveira</Title>
-        <SubTitle>{'< developer >'}</SubTitle>
-      </Box>
+      <Container>
+        {projects.map((project) => (
+          <Box mr={3}>
+            <Link sx={{ textDecoration: 'none' }} target="_blank" href={project.website}>
+              <ProjectCard
+                src={project.src}
+                title={project.title}
+                description={project.description}
+              />
+            </Link>
+          </Box>
+        ))}
+      </Container>
     </main>
   )
 }
