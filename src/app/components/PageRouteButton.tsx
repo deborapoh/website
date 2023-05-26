@@ -4,17 +4,18 @@ import { usePathname, useRouter } from "next/navigation"
 import { ReactNode } from "react"
 
 const PageButton = styled(Button)(({ theme }) => ({
-  border: `3px solid ${theme.palette.primary.main}`,
+  border: `3px solid ${theme.palette.common.white}`,
   borderRadius: 25,
+  color: theme.palette.common.white,
   textTransform: 'none',
-  height: 48,
-  width: 160,
-  fontSize: 22,
+  height: 40,
+  width: 140,
+  fontSize: 16,
   lineHeight: 0,
 
   '&.selected': {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
+    backgroundColor: theme.palette.common.white,
+    color: theme.palette.background.default,
   },
 }))
 

@@ -9,7 +9,7 @@ const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
-  height: 'calc(100vh - 144px)',
+  height: 'calc(100vh - 100px)',
   paddingInline: 92,
   paddingBlock: 88,
   overflowY: 'scroll',

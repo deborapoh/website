@@ -7,7 +7,7 @@ const Container = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'flex-end',
   alignItems: 'flex-end',
-  height: 'calc(100vh - 144px)',
+  height: 'calc(100vh -100px)',
   paddingInline: 92,
   paddingBottom: 88,
 }))

@@ -1,7 +1,8 @@
 'use client'
 
 import { ReactNode } from 'react'
-import { ThemeProvider, CssBaseline, Box, styled, Button, Link } from '@mui/material'
+import { ThemeProvider, CssBaseline, Box, IconButton, styled, Link } from '@mui/material'
+import { Menu } from '@mui/icons-material'
 import { RecoilRoot } from 'recoil'
 
 import './globals.css'
@@ -11,21 +12,21 @@ import Image from 'next/image'
 import githubLogo from './images/github.svg'
 import linkedinLogo from './images/linkedin.svg'
 import languageGlobe from './images/language-globe.svg'
-import { useRouter, usePathname } from 'next/navigation'
-import classNames from 'classnames'
 import PageRouteButton from './components/PageRouteButton'
 import LanguageMenu from './components/LanguageMenu'
 
-const Container = styled(Box)(() => ({
+const Container = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.background.default,
+  height: '100vh',
   width: '100%',
+  maxWidth: 1340,
 }))
 
 const Header = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  paddingInline: 92,
-  height: 144,
+  height: 100,
   width: '100%',
 }))
 
@@ -33,14 +34,14 @@ const SocialMediaContainer = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  width: 125,
+  width: 110,
 }))
 
 const PagesContainer = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  width: 920, // 970
+  width: 820, // 970 change when adding language
 }))
 
 export default function RootLayout({
@@ -60,7 +61,25 @@ export default function RootLayout({
           <CssBaseline />
           <body>
             <Container>
-              <Header>
+              <Header
+                className='px-[34px] 2xl:px-[70px]'
+              >
+                <IconButton
+                  className="xl:hidden"
+                  sx={{
+                    color: '#fff',
+                    width: 50,
+                    height: 50,
+                  }}
+                >
+                  <Menu
+                    sx={{
+                      color: '#fff',
+                      width: 50,
+                      height: 50,
+                    }}
+                  />
+                </IconButton>
                 <SocialMediaContainer>
                   <Link href="https://github.com/deborapoh" target="_blank" sx={{ textDecoration: 'none' }}>
                     <Image
@@ -71,8 +90,8 @@ export default function RootLayout({
                       height={1000}
                       sizes="100vw"
                       style={{
-                        height: 50,
-                        width: 50,
+                        height: 40,
+                        width: 40,
                       }}
                     />
                   </Link>
@@ -85,13 +104,13 @@ export default function RootLayout({
                       height={1000}
                       sizes="100vw"
                       style={{
-                        height: 50,
-                        width: 50,
+                        height: 40,
+                        width: 40,
                       }}
                     />
                   </Link>
                 </SocialMediaContainer>
-                <PagesContainer>
+                <PagesContainer className="hidden xl:flex">
                   <PageRouteButton pathname='/'>Home</PageRouteButton>
                   <PageRouteButton pathname='/about'>About</PageRouteButton>
                   <PageRouteButton pathname='/resume'>Resume</PageRouteButton>
@@ -106,8 +125,8 @@ export default function RootLayout({
                       height={1000}
                       sizes="100vw"
                       style={{
-                        height: 50,
-                        width: 50,
+                        height: 40,
+                        width: 40,
                       }}
                     />
                   </LanguageMenu> */}

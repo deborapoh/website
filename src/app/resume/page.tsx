@@ -5,7 +5,7 @@ import { Box, Divider, Link, Typography, styled } from "@mui/material"
 import jobs from '../jobs.json'
 
 const Container = styled(Box)(({ theme }) => ({
-  height: 'calc(100vh - 144px)',
+  height: 'calc(100vh - 100px)',
   paddingInline: 92,
   paddingBlock: 88,
   overflowY: 'scroll',
