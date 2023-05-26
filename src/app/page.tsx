@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Link, Typography, styled } from "@mui/material"
+import { Box, Link, styled } from "@mui/material"
 import Image from "next/image"
 
 import backgroundDesktop from './images/home-desktop-background.png'

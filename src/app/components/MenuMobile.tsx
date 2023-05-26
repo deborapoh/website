@@ -1,17 +1,30 @@
-import { Box, Drawer as DrawerMui, Button, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material/'
+import { Box, Drawer as DrawerMui, Button, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, IconButton } from '@mui/material/'
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Fragment, KeyboardEvent, MouseEvent, useState } from 'react';
+import { Menu } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
-export default function Drawer() {
+export default function MenuMobile({ ...props }) {
+  const router = useRouter()
+
   const [state, setState] = useState({
     top: false,
     left: false,
     bottom: false,
     right: false,
   });
+
+  const goToRoute = (text: string) => {
+    if (text === 'Home') {
+      router.push('/')
+      return
+    }
+
+    router.push(`/${text.toLowerCase()}`)
+  }
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -35,21 +48,8 @@ export default function Drawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {['Home', 'About', 'Resume', 'Projects', 'Contact'].map((text, index) => (
+          <ListItem onClick={() => goToRoute(text)} key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -63,19 +63,31 @@ export default function Drawer() {
   );
 
   return (
-    <div>
-      {(['left', 'right', 'top', 'bottom'] as const).map((anchor) => (
-        <Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <DrawerMui
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-          </DrawerMui>
-        </Fragment>
-      ))}
+    <div {...props}>
+      <Button onClick={toggleDrawer('left', true)}>
+      <IconButton
+        sx={{
+          color: '#fff',
+          width: 50,
+          height: 50,
+        }}
+      >
+        <Menu
+          sx={{
+            color: '#fff',
+            width: 50,
+            height: 50,
+          }}
+        />
+      </IconButton>
+      </Button>
+      <DrawerMui
+        anchor='left'
+        open={state['left']}
+        onClose={toggleDrawer('left', false)}
+      >
+        {list('left')}
+      </DrawerMui>
     </div>
   );
 }

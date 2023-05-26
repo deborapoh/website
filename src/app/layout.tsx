@@ -1,8 +1,7 @@
 'use client'
 
 import { ReactNode } from 'react'
-import { ThemeProvider, CssBaseline, Box, IconButton, styled, Link } from '@mui/material'
-import { Menu } from '@mui/icons-material'
+import { ThemeProvider, CssBaseline, Box, styled, Link } from '@mui/material'
 import { RecoilRoot } from 'recoil'
 
 import './globals.css'
@@ -14,6 +13,7 @@ import linkedinLogo from './images/linkedin.svg'
 import languageGlobe from './images/language-globe.svg'
 import PageRouteButton from './components/PageRouteButton'
 import LanguageMenu from './components/LanguageMenu'
+import MenuMobile from './components/MenuMobile'
 
 const Container = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
@@ -64,22 +64,7 @@ export default function RootLayout({
               <Header
                 className='px-[34px] 2xl:px-[70px]'
               >
-                <IconButton
-                  className="xl:hidden"
-                  sx={{
-                    color: '#fff',
-                    width: 50,
-                    height: 50,
-                  }}
-                >
-                  <Menu
-                    sx={{
-                      color: '#fff',
-                      width: 50,
-                      height: 50,
-                    }}
-                  />
-                </IconButton>
+                <MenuMobile className="xl:hidden" />
                 <SocialMediaContainer>
                   <Link href="https://github.com/deborapoh" target="_blank" sx={{ textDecoration: 'none' }}>
                     <Image
