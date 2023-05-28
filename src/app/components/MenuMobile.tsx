@@ -1,21 +1,23 @@
-import { Box, Drawer as DrawerMui, Button, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemText, IconButton } from '@mui/material/'
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import { Fragment, KeyboardEvent, MouseEvent, useState } from 'react';
-import { Menu } from '@mui/icons-material';
-import { useRouter } from 'next/navigation';
-
-type Anchor = 'top' | 'left' | 'bottom' | 'right';
+import { KeyboardEvent, MouseEvent, useState } from 'react'
+import {
+  Box,
+  Drawer as DrawerMui,
+  Button,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  IconButton
+} from '@mui/material/'
+import InboxIcon from '@mui/icons-material/MoveToInbox'
+import MailIcon from '@mui/icons-material/Mail'
+import { Menu } from '@mui/icons-material'
+import { useRouter } from 'next/navigation'
 
 export default function MenuMobile({ ...props }) {
   const router = useRouter()
-
-  const [state, setState] = useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
+  const [open, setOpen] = useState<boolean>(false)
 
   const goToRoute = (text: string) => {
     if (text === 'Home') {
@@ -27,45 +29,45 @@ export default function MenuMobile({ ...props }) {
   }
 
   const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
+    (open: boolean) =>
     (event: KeyboardEvent | MouseEvent) => {
       if (
         event.type === 'keydown' &&
         ((event as KeyboardEvent).key === 'Tab' ||
           (event as KeyboardEvent).key === 'Shift')
       ) {
-        return;
+        return
       }
 
-      setState({ ...state, [anchor]: open });
-    };
+      setOpen(open)
+    }
 
-  const list = (anchor: Anchor) => (
+  const itemList = () => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: 250 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
     >
       <List>
         {['Home', 'About', 'Resume', 'Projects', 'Contact'].map((text, index) => (
-          <ListItem onClick={() => goToRoute(text)} key={text} disablePadding>
+          <ListItem onClick={() => goToRoute(text)} key={text}>
             <ListItemButton>
-              <ListItemIcon>
+              {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+              </ListItemIcon> */}
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
     </Box>
-  );
+  )
 
   return (
     <div {...props}>
-      <Button onClick={toggleDrawer('left', true)}>
       <IconButton
+        onClick={toggleDrawer(true)}
         sx={{
           color: '#fff',
           width: 50,
@@ -80,14 +82,13 @@ export default function MenuMobile({ ...props }) {
           }}
         />
       </IconButton>
-      </Button>
       <DrawerMui
         anchor='left'
-        open={state['left']}
-        onClose={toggleDrawer('left', false)}
+        open={open}
+        onClose={toggleDrawer(false)}
       >
-        {list('left')}
+        {itemList()}
       </DrawerMui>
     </div>
-  );
+  )
 }
