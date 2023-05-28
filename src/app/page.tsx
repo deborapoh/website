@@ -49,7 +49,7 @@ export default function Home() {
           }}
         />
         <Image
-          className="hidden 2xl:!flex"
+          className="!hidden 2xl:!flex"
           src={backgroundDesktop}
           alt="Background image for Desktop"
           width={1000}
@@ -63,7 +63,7 @@ export default function Home() {
         />
         {/* Desktop Logo */}
         <Box
-          className="hidden xl:flex"
+          className="!hidden xl:!flex"
           sx={{
             position: 'absolute',
             height: 200,

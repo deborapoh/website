@@ -62,7 +62,7 @@ export default function RootLayout({
           <body>
             <Container>
               <Header
-                className='px-[34px] 2xl:px-[70px]'
+                className='!px-[34px] 2xl:!px-[70px]'
               >
                 <MenuMobile className="xl:!hidden" />
                 <SocialMediaContainer>
@@ -93,7 +93,7 @@ export default function RootLayout({
                     />
                   </Link>
                 </SocialMediaContainer>
-                <PagesContainer className="hidden xl:!flex">
+                <PagesContainer className="!hidden xl:!flex">
                   <PageRouteButton pathname='/'>Home</PageRouteButton>
                   <PageRouteButton pathname='/about'>About</PageRouteButton>
                   <PageRouteButton pathname='/resume'>Resume</PageRouteButton>
