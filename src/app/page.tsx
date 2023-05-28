@@ -23,7 +23,7 @@ export default function Home() {
     <main>
       <Container>
         <Image
-          className="sm:hidden"
+          className="sm:!hidden"
           src={backgroundMobile}
           alt="Background image for Mobile"
           width={1000}
@@ -36,7 +36,7 @@ export default function Home() {
           }}
         />
         <Image
-          className="hidden sm:flex 2xl:hidden"
+          className="!hidden sm:!flex 2xl:!hidden"
           src={backgroundTablet}
           alt="Background image for Mobile"
           width={1000}
@@ -49,7 +49,7 @@ export default function Home() {
           }}
         />
         <Image
-          className="hidden 2xl:flex"
+          className="hidden 2xl:!flex"
           src={backgroundDesktop}
           alt="Background image for Desktop"
           width={1000}
@@ -74,7 +74,7 @@ export default function Home() {
           }}
         />
         <Image
-          className="hidden xl:flex"
+          className="!hidden xl:!flex"
           src={decoderLogo}
           alt="Decoder Logo"
           width={580}
@@ -89,7 +89,7 @@ export default function Home() {
         />
         {/* Mobile Logo */}
         <Box
-          className="xl:hidden"
+          className="xl:!hidden"
           sx={{
             position: 'absolute',
             height: 120,
@@ -99,7 +99,7 @@ export default function Home() {
           }}
         />
         <Image
-          className="xl:hidden"
+          className="xl:!hidden"
           src={decoderLogo}
           alt="Decoder Logo"
           width={1000}
