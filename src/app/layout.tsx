@@ -64,11 +64,10 @@ export default function RootLayout({
               <Header
                 className='px-[34px] 2xl:px-[70px]'
               >
-                <MenuMobile className="xl:hidden" />
+                <MenuMobile className="xl:!hidden" />
                 <SocialMediaContainer>
                   <Link href="https://github.com/deborapoh" target="_blank" sx={{ textDecoration: 'none' }}>
                     <Image
-                      className=""
                       src={githubLogo}
                       alt="Github image link"
                       width={1000}
@@ -82,7 +81,6 @@ export default function RootLayout({
                   </Link>
                   <Link href="https://www.linkedin.com/in/deborapoh" target="_blank" sx={{ textDecoration: 'none' }}>
                     <Image
-                      className=""
                       src={linkedinLogo}
                       alt="Linkedin image link"
                       width={1000}
@@ -95,7 +93,7 @@ export default function RootLayout({
                     />
                   </Link>
                 </SocialMediaContainer>
-                <PagesContainer className="hidden xl:flex">
+                <PagesContainer className="hidden xl:!flex">
                   <PageRouteButton pathname='/'>Home</PageRouteButton>
                   <PageRouteButton pathname='/about'>About</PageRouteButton>
                   <PageRouteButton pathname='/resume'>Resume</PageRouteButton>
@@ -103,7 +101,6 @@ export default function RootLayout({
                   <PageRouteButton pathname='/contact'>Contact</PageRouteButton>
                   {/* <LanguageMenu>
                     <Image
-                      className=""
                       src={languageGlobe}
                       alt="Language globe image link"
                       width={1000}
