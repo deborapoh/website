@@ -2,10 +2,11 @@
 
 import { Box, Divider, Link, Typography, styled } from "@mui/material"
 
-import jobs from '../jobs.json'
+import jobs from '../../jobs.json'
+import { header } from "@/app/constants"
 
 const Container = styled(Box)(({ theme }) => ({
-  height: 'calc(100vh - 100px)',
+  height: `calc(100vh - ${header.height}px)`,
   paddingInline: 92,
   paddingBlock: 88,
   overflowY: 'scroll',
@@ -43,7 +44,6 @@ const Anchor = styled(Link)(({ theme }) => ({
 
 export default function Resume() {
   return (
-    <main>
       <Container>
         {jobs?.map((job) => {
           const jobName = `${job.company.name} | ${job.company.location}`;
@@ -73,6 +73,5 @@ export default function Resume() {
           )
         })}
       </Container>
-    </main>
   )
 }

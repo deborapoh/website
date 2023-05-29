@@ -1,5 +1,6 @@
 'use client'
 
+import { header } from "@/app/constants"
 import { Box, Typography, styled } from "@mui/material"
 
 const Container = styled(Box)(({ theme }) => ({
@@ -7,7 +8,7 @@ const Container = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'flex-end',
   alignItems: 'flex-end',
-  height: 'calc(100vh -100px)',
+  height: `calc(100vh - ${header.height}px)`,
   paddingInline: 92,
   paddingBottom: 88,
 }))
@@ -25,18 +26,16 @@ const Body = styled(Typography)(({ theme }) => ({
   textAlign: 'end',
 }))
 
-export default function About() {
+export default function Contact() {
   return (
-    <main>
       <Container>
-        <Title>Fullstack Developer</Title>
+        <Title>Personal Info</Title>
         <Body>
-          Working as a Full stack developer for the past 6 years. I started my career as
-          a Graphic Designer and after studying Math and Algorithms I fell in love with
-          Software Development. I have experience with JavaScript, TypeScript, React,
-          Node and Python. Currently studying Golang.
+        Email: <br />
+        deborapoh@gmail.com <br /><br />
+        WhatsApp: <br />
+        (47) 99142-7504
         </Body>
       </Container>
-    </main>
   )
 }

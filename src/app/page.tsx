@@ -7,10 +7,11 @@ import backgroundDesktop from './images/home-desktop-background.png'
 import backgroundMobile from './images/home-mobile-background.png'
 import backgroundTablet from './images/home-tablet-background.png'
 import decoderLogo from './images/decoder-logo.svg'
+import { header } from "./constants"
 
 const Container = styled(Box)(() => ({
   display: 'flex',
-  height: 'calc(100vh - 100px)',
+  height: `calc(100vh - ${header.height}px)`,
   overflow: 'hidden',
   position: 'relative',
   width: '100%',

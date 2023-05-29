@@ -14,6 +14,7 @@ import languageGlobe from './images/language-globe.svg'
 import PageRouteButton from './components/PageRouteButton'
 import LanguageMenu from './components/LanguageMenu'
 import MenuMobile from './components/MenuMobile'
+import { header } from './constants'
 
 const Container = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
@@ -26,7 +27,7 @@ const Header = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  height: 100,
+  height: header.height,
   width: '100%',
 }))
 
@@ -62,7 +63,7 @@ export default function RootLayout({
           <body>
             <Container>
               <Header
-                className='!px-[34px] 2xl:!px-[70px]'
+                className='!px-[34px] 2xl:!px-[70px]' // same as about page Container
               >
                 <MenuMobile className="xl:!hidden" />
                 <SocialMediaContainer>

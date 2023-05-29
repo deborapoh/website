@@ -1,15 +1,16 @@
 'use client'
 
 import { Box, Link, Typography, styled } from "@mui/material"
-import ProjectCard from "../components/ProjectCard"
+import ProjectCard from "../../components/ProjectCard"
 
-import projects from '../projects.json'
+import projects from '../../projects.json'
+import { header } from "@/app/constants"
 
 const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
-  height: 'calc(100vh - 100px)',
+  height: `calc(100vh - ${header.height}px)`,
   paddingInline: 92,
   paddingBlock: 88,
   overflowY: 'scroll',
@@ -17,7 +18,6 @@ const Container = styled(Box)(({ theme }) => ({
 
 export default function Projects() {
   return (
-    <main>
       <Container>
         {projects.map((project) => (
           <Box mr={3}>
@@ -31,6 +31,5 @@ export default function Projects() {
           </Box>
         ))}
       </Container>
-    </main>
   )
 }

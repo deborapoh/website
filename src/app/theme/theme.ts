@@ -27,5 +27,8 @@ export const lightTheme = createTheme({
       white: '#FFFFFF',
       black: '#4E4E4E',
     },
+    grey: {
+      50: '#9e9e9e',
+    }
   },
 })
