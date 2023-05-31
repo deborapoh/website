@@ -4,6 +4,7 @@ export const header = {
 
 export const itemsZIndex = {
   jobList: 1,
+  projectList: 1,
   backgroundAboutPhoto: 1,
   backgroundLittleBalls: 0,
 }

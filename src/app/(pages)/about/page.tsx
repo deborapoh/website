@@ -49,7 +49,7 @@ export default function About() {
         >About</PurpleText>
         <WhiteText
           className={`
-            !text-[35px] 2xl:!text-[60px]
+            !text-[30px] 2xl:!text-[60px]
           `}
         >Debora de Oliveira</WhiteText>
         <PurpleText

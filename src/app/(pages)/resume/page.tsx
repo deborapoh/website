@@ -6,6 +6,8 @@ import jobs from '../../jobs.json'
 import { header } from "@/app/constants"
 
 const Container = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
   height: `calc(100vh - ${header.height}px)`,
   // scroll configuration
   overflowY: 'scroll',
@@ -20,13 +22,8 @@ const Container = styled(Box)(({ theme }) => ({
 const JobContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-end',
   zIndex: 1,
-  marginBottom: 92,
-
-  ':not(:first-child)': {
-    marginTop: 92,
-  }
+  marginBottom: 112,
 }))
 
 const Divider = styled(DividerMui)(({ theme }) => ({
@@ -50,7 +47,7 @@ const PurpleText = styled(Typography)(({ theme }) => ({
 
 const Body = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey[50],
-  marginTop: 72,
+  marginTop: 32,
   zIndex: 1,
 }))
 
@@ -59,53 +56,56 @@ export default function Resume() {
     <Container
       className={`
         !px-[34px] 2xl:!px-[70px]
+        !items-center 2xl:!items-end
         pt-[60px] 2xl:!pt-[28px]
       `}
     >
+      <PurpleText
+        className={`
+          2xl:!hidden
+          !text-[35px]
+          !mb-[42px]
+        `}
+      >Resume</PurpleText>
       {jobs?.map((job) => {
         return (
-          <>
-            <JobContainer
+          <JobContainer className="!items-center 2xl:!items-end">
+            <WhiteText
               className={`
-                !items-center 2xl:!items-end
+                !text-center 2xl:!text-end
+                !text-[30px] 2xl:!text-[60px]
+              `}
+            >{job.title}</WhiteText>
+            <PurpleText
+              className={`
+                !text-[24px] 2xl:!text-[45px]
+                !text-center 2xl:!text-end
+              `}
+            >{job.period}</PurpleText>
+            <Body
+              className={`
+                !text-[20px] 2xl:!text-[28px]
+                !text-center 2xl:!text-end
+                !w-10/12 2xl:!w-11/12
               `}
             >
-              <WhiteText
-                className={`
-                  !text-[35px] 2xl:!text-[60px]
-                `}
-              >{job.title}</WhiteText>
-              <PurpleText
-                className={`
-                  !text-[24px] 2xl:!text-[45px]
-                  !text-center 2xl:!text-end
-                `}
-              >{job.period}</PurpleText>
-              <Body
-                className={`
-                  !text-[20px] 2xl:!text-[28px]
-                  !text-center 2xl:!text-end
-                  !w-10/12 2xl:!w-11/12
-                `}
-              >
-                <PurpleText className="!text-[20px] 2xl:!text-[28px]">
-                  {`${job.company.name} | `}
-                  <Anchor href={job.company.website}>{job.company.website}</Anchor>
-                </PurpleText >
-                <b>{job.location}</b> <br />
-                {job.description.map((description) => (
-                  <>
-                    {description}
-                    <br />
-                  </>
-                ))}
-                <br />
-                <PurpleText className="!text-[20px] 2xl:!text-[28px]">Softwares/Tools:</PurpleText>
-                {job.tools}
-              </Body>
-            </JobContainer>
+              <PurpleText className="!text-[20px] 2xl:!text-[28px]">
+                {`${job.company.name} | `}
+                <Anchor href={job.company.website}>{job.company.website}</Anchor>
+              </PurpleText >
+              <b>{job.location}</b> <br />
+              {job.description.map((description) => (
+                <>
+                  {description}
+                  <br />
+                </>
+              ))}
+              <br />
+              <PurpleText className="!text-[20px] 2xl:!text-[28px]">Softwares/Tools:</PurpleText>
+              {job.tools}
+            </Body>
             {job.last === 'false' && <Divider />}
-          </>
+          </JobContainer>
         )
       })}
     </Container>

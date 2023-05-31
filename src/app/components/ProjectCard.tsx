@@ -1,23 +1,32 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material"
+import { Card, CardContent, CardMedia, Typography, styled } from "@mui/material"
 
 import t from '../images/gb-front.jpg'
+
+const BlackText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.common.black,
+}))
+
+const PurpleText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.primary.main,
+  fontWeight: 'bold',
+}))
 
 const ProjectCard = ({ src, title, description }: { src: string; title: string; description: string }) => {
   console.log(t.src)
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 250 }}>
       <CardMedia
         sx={{ height: 140 }}
         image={src}
         title={title}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <PurpleText gutterBottom>
           {title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
+        </PurpleText>
+        <BlackText>
           {description}
-        </Typography>
+        </BlackText>
       </CardContent>
       {/* <CardActions>
         <Button size="small">Share</Button>
