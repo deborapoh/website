@@ -6,11 +6,9 @@ import { Box, Typography, styled } from "@mui/material"
 const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'flex-end',
-  alignItems: 'flex-end',
+  justifyContent: 'flex-start',
   height: `calc(100vh - ${header.height}px)`,
-  paddingInline: 92,
-  paddingBottom: 88,
+  paddingRight: 34,
 }))
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -19,23 +17,65 @@ const Title = styled(Typography)(({ theme }) => ({
   marginBottom: 56,
 }))
 
+const WhiteText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.common.white,
+}))
+
+const PurpleText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.secondary.main,
+}))
+
 const Body = styled(Typography)(({ theme }) => ({
-  fontSize: 32,
-  color: theme.palette.common.black,
-  width: 765,
-  textAlign: 'end',
+  color: theme.palette.grey[50],
 }))
 
 export default function Contact() {
   return (
-      <Container>
-        <Title>Personal Info</Title>
-        <Body>
-        Email: <br />
-        deborapoh@gmail.com <br /><br />
-        WhatsApp: <br />
-        (47) 99142-7504
-        </Body>
+      <Container
+        className={`
+          !px-[34px] 2xl:!px-[70px]
+          !items-center 2xl:!items-end
+          pt-[60px] 2xl:!pt-[28px]
+        `}
+      >
+        <WhiteText
+          className={`
+            !text-[30px] 2xl:!text-[60px]
+          `}
+        >Contact Info</WhiteText>
+        <PurpleText
+          className={`
+            !text-[20px] 2xl:!text-[28px]
+            !text-center 2xl:!text-end
+            !w-10/12 2xl:!w-7/12
+            mt-[72px]
+          `}
+        >Email:</PurpleText>
+        <Body
+          className={`
+            !text-[20px] 2xl:!text-[28px]
+            !text-center 2xl:!text-end
+            !w-10/12 2xl:!w-7/12
+            mt-[24px]
+          `}
+        >deborapoh@gmail.com</Body>
+
+        <PurpleText
+          className={`
+            !text-[20px] 2xl:!text-[28px]
+            !text-center 2xl:!text-end
+            !w-10/12 2xl:!w-7/12
+            mt-[54px]
+          `}
+        >WhatsApp:</PurpleText>
+        <Body
+          className={`
+            !text-[20px] 2xl:!text-[28px]
+            !text-center 2xl:!text-end
+            !w-10/12 2xl:!w-7/12
+            mt-[24px]
+          `}
+        >(47) 99142-7504</Body>
       </Container>
   )
 }
