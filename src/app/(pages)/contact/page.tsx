@@ -35,7 +35,7 @@ export default function Contact() {
         className={`
           !px-[34px] 2xl:!px-[70px]
           !items-center 2xl:!items-end
-          pt-[60px] 2xl:!pt-[28px]
+          !pt-[60px] 2xl:!pt-[28px]
         `}
       >
         <WhiteText
@@ -48,7 +48,7 @@ export default function Contact() {
             !text-[20px] 2xl:!text-[28px]
             !text-center 2xl:!text-end
             !w-10/12 2xl:!w-7/12
-            mt-[72px]
+            !mt-[72px]
           `}
         >Email:</PurpleText>
         <Body
@@ -56,7 +56,7 @@ export default function Contact() {
             !text-[20px] 2xl:!text-[28px]
             !text-center 2xl:!text-end
             !w-10/12 2xl:!w-7/12
-            mt-[24px]
+            !mt-[24px]
           `}
         >deborapoh@gmail.com</Body>
 
@@ -65,7 +65,7 @@ export default function Contact() {
             !text-[20px] 2xl:!text-[28px]
             !text-center 2xl:!text-end
             !w-10/12 2xl:!w-7/12
-            mt-[54px]
+            !mt-[54px]
           `}
         >WhatsApp:</PurpleText>
         <Body
@@ -73,7 +73,7 @@ export default function Contact() {
             !text-[20px] 2xl:!text-[28px]
             !text-center 2xl:!text-end
             !w-10/12 2xl:!w-7/12
-            mt-[24px]
+            !mt-[24px]
           `}
         >(47) 99142-7504</Body>
       </Container>
