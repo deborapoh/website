@@ -34,7 +34,7 @@ const PurpleText = styled(Typography)(({ theme }) => ({
 
 const Body = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey[50],
-  marginTop: 72,
+  marginBlock: 72,
 }))
 
 export default function About() {
