@@ -65,6 +65,20 @@ export default function About() {
         `}
       >{'< fullstack developer >'}</PurpleText>
 
+      {/* Mobile image */}
+      <Image
+        className="2xl:!hidden"
+        src={backgroundMobilePhoto}
+        alt="description"
+        style={{
+          height: 'auto',
+          width: 360,
+          maxWidth: '90%',
+          zIndex: itemsZIndex.backgroundAboutPhoto,
+          marginTop: 72,
+        }}
+      />
+
       <Body
         className={`
           !text-[20px] 2xl:!text-[28px]
@@ -77,20 +91,6 @@ export default function About() {
         Software Development. I have experience with JavaScript, TypeScript, React,
         Node and Python. Currently studying Golang.
       </Body>
-
-      {/* Mobile image */}
-      <Image
-        className="2xl:!hidden"
-        src={backgroundMobilePhoto}
-        alt="description"
-        style={{
-          height: 'auto',
-          width: 360,
-          maxWidth: '95%',
-          zIndex: itemsZIndex.backgroundAboutPhoto,
-          marginBlock: 72,
-        }}
-      />
     </Container>
   )
 }
