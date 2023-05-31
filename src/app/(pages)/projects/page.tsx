@@ -42,7 +42,7 @@ export default function Projects() {
             !text-[35px]
             !mb-[42px]
           `}
-        >Resume</PurpleText>
+        >Projects</PurpleText>
         {projects.map((project) => (
           <Box
             zIndex={itemsZIndex.projectList}
