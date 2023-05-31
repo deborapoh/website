@@ -20,7 +20,7 @@ export default function Projects() {
   return (
       <Container>
         {projects.map((project) => (
-          <Box mr={3}>
+          <Box key={project.src} mr={3}>
             <Link sx={{ textDecoration: 'none' }} target="_blank" href={project.website}>
               <ProjectCard
                 src={project.src}

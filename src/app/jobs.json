@@ -4,11 +4,11 @@
     "period": "October 2021 - January 2023",
     "company": {
       "name": "WALDO",
-      "location": "UNITED STATES",
       "website": "https://www.waldo.fyi"
     },
-    "location": "REMOTELY IN BLUMENAU/SC - BRAZIL",
+    "location": "Location: United States | Remotely in Blumenau/SC - Brazil",
     "description": [
+      "Job description:",
       "• Helped the team creating and improving a search engine tool;",
       "• Implemented E2E and Unit Tests to make sure we had a good percentage of test coverage on front end and back end;",
       "• Helped improve the NLP service using Spacy and Python."
@@ -21,11 +21,11 @@
     "period": "April 2021 - September 2021",
     "company": {
       "name": "ZOOP",
-      "location": "RIO DE JANEIRO/RJ - BRAZIL",
       "website": "https://zoop.com.br"
     },
-    "location": "REMOTELY IN SÃO PAULO/SP - BRAZIL",
+    "location": "Location: Rio de Janeiro/RJ | Remotely in São Paulo/SP - Brazil",
     "description": [
+      "Job description:",
       "• I created an initiative to restructure the backend applications;",
       "• Implemented an auto scale policy based on memory usage in AWS for some applications to reduce costs and improve performance."
     ],
@@ -37,11 +37,11 @@
     "period": "March 2020 - April 2021",
     "company": {
       "name": "MAITHA TECH (Cobasi - Pet Shop)",
-      "location": "RIO DE JANEIRO/RJ - BRAZIL",
       "website": "https://maitha.com.br"
     },
-    "location": "REMOTELY IN SÃO PAULO/SP - BRAZIL",
+    "location": "Location: São Paulo/SP | Remotely in São Paulo/SP - Brazil",
     "description": [
+      "Job description:",
       "• I helped bootstrap the Ecommerce Customer Services Team and single handedly Customer Services and Logistics Assistance process automation using Rest APIs and Messaging Services as micro services;",
       "• I have set up the Whatsapp API and built a chatbot for Customer Services;",
       "• Deployed applications using Docker Compose and Bitbucket pipelines in servers hosted at Azure."
@@ -54,11 +54,11 @@
     "period": "August 2019 - March 2020",
     "company": {
       "name": "GAIVOTA",
-      "location": "SÃO PAULO/SP - BRAZIL",
       "website": "https://gaivota.ai"
     },
-    "location": "ON SITE",
+    "location": "Location: São Paulo/SP - Brazil | On site",
     "description": [
+      "Job description:",
       "• On a daily basis I helped the team creating new features and fixing bugs on frontend and backend applications;",
       "• I helped migrate our monolithic system into micro services. Some of them became APIs, others were transformed into messaging services."
     ],
@@ -70,11 +70,11 @@
     "period": "August 2018 - August 2019",
     "company": {
       "name": "WK SISTEMAS",
-      "location": "BLUMENAU/SC - BRAZIL",
       "website": "https://wk.com.br"
     },
-    "location": "ON SITE",
+    "location": "Location: Blumenau/SC - Brazil | On site",
     "description": [
+      "Job description:",
       "• On a daily basis I helped the team creating new features and fixing bugs on a PWA app using ReactJS;",
       "• I created a BFF API for our PWA app using dotnet and dotnet-graphql."
     ],
@@ -86,11 +86,11 @@
     "period": "December 2015 - August 2018",
     "company": {
       "name": "LINX SISTEMAS",
-      "location": "BLUMENAU/SC - BRAZIL",
       "website": "https://www.linx.com.br"
     },
-    "location": "ON SITE",
+    "location": "Location: Blumenau/SC - Brazil | On site",
     "description": [
+      "Job description:",
       "Aug 2017 - Aug 2018 | Python Developer",
       "• I worked in the sustainability team fixing bugs to make sure we had a stable version and implemented small features from time to time.",
       "Dec 2015 - Aug 2017 | Test Analyst",
