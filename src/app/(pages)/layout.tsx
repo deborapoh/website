@@ -40,6 +40,7 @@ export default function PagesLayout({
             right: 0,
             height: 650,
             width: 'auto',
+            zIndex: itemsZIndex.backgroundBubbles
           }}
         />
     </>

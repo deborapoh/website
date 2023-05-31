@@ -14,6 +14,15 @@ const Container = styled(Box)(({ theme }) => ({
   height: `calc(100vh - ${header.height}px)`,
   paddingRight: 34,
   position: 'relative',
+
+  // scroll configuration
+  overflowY: 'scroll',
+  msOverflowStyle: 'none', // for IE and Edge
+  scrollbarWidth: 'none', // for Firefox
+
+  '::-webkit-scrollbar': { // for Chrome, Safari and Opera
+    display: 'none'
+  }
 }))
 
 const WhiteText = styled(Typography)(({ theme }) => ({
@@ -70,6 +79,20 @@ export default function About() {
           Software Development. I have experience with JavaScript, TypeScript, React,
           Node and Python. Currently studying Golang.
         </Body>
+
+        {/* Mobile image */}
+        <Image
+          className="2xl:!hidden"
+          src={backgroundMobilePhoto}
+          alt="description"
+          style={{
+            height: 'auto',
+            width: 360,
+            maxWidth: '95%',
+            // zIndex: itemsZIndex.backgroundAboutPhoto,
+            marginTop: 72,
+          }}
+        />
       </Container>
 
       {/* Desktop image */}
@@ -83,24 +106,6 @@ export default function About() {
           width: 720,
           bottom: 0,
           left: 0,
-          zIndex: itemsZIndex.backgroundAboutPhoto,
-        }}
-      />
-
-      {/* Mobile image */}
-      <Image
-        className="2xl:!hidden"
-        src={backgroundMobilePhoto}
-        alt="description"
-        style={{
-          position: 'absolute',
-          height: 'auto',
-          width: 360,
-          maxWidth: '95%',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          margin: '0 auto',
           zIndex: itemsZIndex.backgroundAboutPhoto,
         }}
       />

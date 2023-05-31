@@ -7,4 +7,5 @@ export const itemsZIndex = {
   projectList: 1,
   backgroundAboutPhoto: 1,
   backgroundLittleBalls: 0,
+  backgroundBubbles: 0,
 }
