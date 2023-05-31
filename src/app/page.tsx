@@ -34,6 +34,7 @@ export default function Home() {
             height: 'auto',
             width: '100%',
             maxWidth: 1280,
+            top: 120,
           }}
         />
         <Image
