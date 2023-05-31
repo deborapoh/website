@@ -1,7 +1,5 @@
 import { Card, CardContent, CardMedia, Typography, styled } from "@mui/material"
 
-import t from '../images/gb-front.jpg'
-
 const BlackText = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.black,
 }))
@@ -12,9 +10,8 @@ const PurpleText = styled(Typography)(({ theme }) => ({
 }))
 
 const ProjectCard = ({ src, title, description }: { src: string; title: string; description: string }) => {
-  console.log(t.src)
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{ height: 275, width: 250 }}>
       <CardMedia
         sx={{ height: 140 }}
         image={src}
