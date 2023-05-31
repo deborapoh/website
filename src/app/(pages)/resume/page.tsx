@@ -78,6 +78,7 @@ export default function Resume() {
               <PurpleText
                 className={`
                   !text-[24px] 2xl:!text-[45px]
+                  !text-center 2xl:!text-end
                 `}
               >{job.period}</PurpleText>
               <Body
