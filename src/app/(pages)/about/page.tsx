@@ -4,7 +4,6 @@ import { header, itemsZIndex } from "@/app/constants"
 import { Box, Typography, styled } from "@mui/material"
 import Image from "next/image"
 
-import backgroundDesktopPhoto from '../../images/background-about-photo.png'
 import backgroundMobilePhoto from '../../images/background-mobile-about-photo.png'
 
 const Container = styled(Box)(({ theme }) => ({
@@ -40,75 +39,58 @@ const Body = styled(Typography)(({ theme }) => ({
 
 export default function About() {
   return (
-    <>
-      <Container
-        // px same as main layout header
+    <Container
+      // px same as main layout header
+      className={`
+        !px-[34px] 2xl:!px-[70px]
+        !items-center 2xl:!items-end
+        pt-[60px] 2xl:!pt-[28px]
+      `}
+    >
+      <PurpleText
         className={`
-          !px-[34px] 2xl:!px-[70px]
-          !items-center 2xl:!items-end
-          pt-[60px] 2xl:!pt-[28px]
+          2xl:!hidden
+          !text-[35px]
+          !mb-[42px]
+        `}
+      >About</PurpleText>
+      <WhiteText
+        className={`
+          !text-[30px] 2xl:!text-[60px]
+        `}
+      >Debora de Oliveira</WhiteText>
+      <PurpleText
+        className={`
+          !text-[24px] 2xl:!text-[45px]
+        `}
+      >{'< fullstack developer >'}</PurpleText>
+
+      <Body
+        className={`
+          !text-[20px] 2xl:!text-[28px]
+          !text-center 2xl:!text-end
+          !w-10/12 2xl:!w-7/12
         `}
       >
-        <PurpleText
-          className={`
-            2xl:!hidden
-            !text-[35px]
-            !mb-[42px]
-          `}
-        >About</PurpleText>
-        <WhiteText
-          className={`
-            !text-[30px] 2xl:!text-[60px]
-          `}
-        >Debora de Oliveira</WhiteText>
-        <PurpleText
-          className={`
-            !text-[24px] 2xl:!text-[45px]
-          `}
-        >{'< fullstack developer >'}</PurpleText>
+        Working as a Full stack developer for the past 6 years. I started my career as
+        a Graphic Designer and after studying Math and Algorithms I fell in love with
+        Software Development. I have experience with JavaScript, TypeScript, React,
+        Node and Python. Currently studying Golang.
+      </Body>
 
-        <Body
-          className={`
-            !text-[20px] 2xl:!text-[28px]
-            !text-center 2xl:!text-end
-            !w-10/12 2xl:!w-7/12
-          `}
-        >
-          Working as a Full stack developer for the past 6 years. I started my career as
-          a Graphic Designer and after studying Math and Algorithms I fell in love with
-          Software Development. I have experience with JavaScript, TypeScript, React,
-          Node and Python. Currently studying Golang.
-        </Body>
-
-        {/* Mobile image */}
-        <Image
-          className="2xl:!hidden"
-          src={backgroundMobilePhoto}
-          alt="description"
-          style={{
-            height: 'auto',
-            width: 360,
-            maxWidth: '95%',
-            // zIndex: itemsZIndex.backgroundAboutPhoto,
-            marginTop: 72,
-          }}
-        />
-      </Container>
-
-      {/* Desktop image */}
+      {/* Mobile image */}
       <Image
-        className="!hidden 2xl:!flex"
-        src={backgroundDesktopPhoto}
+        className="2xl:!hidden"
+        src={backgroundMobilePhoto}
         alt="description"
         style={{
-          position: 'absolute',
           height: 'auto',
-          width: 720,
-          bottom: 0,
-          left: 0,
+          width: 360,
+          maxWidth: '95%',
           zIndex: itemsZIndex.backgroundAboutPhoto,
+          marginBlock: 72,
         }}
       />
-    </>
+    </Container>
   )
 }

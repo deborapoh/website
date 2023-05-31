@@ -7,13 +7,18 @@ import '../globals.css'
 
 import backgroundBubbles from '../images/background-bubbles.svg'
 import backgroundLittleBalls from '../images/background-little-balls.svg'
+import backgroundDesktopPhoto from '../images/background-about-photo.png'
+
 import { itemsZIndex } from "../constants"
+import { usePathname, useRouter } from "next/navigation"
 
 export default function PagesLayout({
   children,
 }: {
   children: ReactNode
 }) {
+  const pathname = usePathname()
+
   return (
     <>
         {children}
@@ -30,6 +35,19 @@ export default function PagesLayout({
             zIndex: itemsZIndex.backgroundLittleBalls
           }}
         />
+        {pathname === '/about' && <Image
+          className="!hidden 2xl:!flex"
+          src={backgroundDesktopPhoto}
+          alt="description"
+          style={{
+            position: 'absolute',
+            height: 'auto',
+            width: 720,
+            bottom: 0,
+            left: 0,
+            zIndex: itemsZIndex.backgroundAboutPhoto,
+          }}
+        />}
         <Image
           className="!h-[400px] 2xl:!h-[600px]"
           src={backgroundBubbles}
