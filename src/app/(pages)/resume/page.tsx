@@ -67,9 +67,9 @@ export default function Resume() {
           !mb-[42px]
         `}
       >Resume</PurpleText>
-      {jobs?.map((job) => {
+      {[...jobs]?.map((job) => {
         return (
-          <JobContainer className="!items-center 2xl:!items-end">
+          <JobContainer key={job.company.name} className="!items-center 2xl:!items-end">
             <WhiteText
               className={`
                 !text-center 2xl:!text-end
@@ -104,7 +104,6 @@ export default function Resume() {
               <PurpleText className="!text-[20px] 2xl:!text-[28px]">Softwares/Tools:</PurpleText>
               {job.tools}
             </Body>
-            {job.last === 'false' && <Divider />}
           </JobContainer>
         )
       })}

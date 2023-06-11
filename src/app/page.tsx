@@ -21,113 +21,121 @@ const Container = styled(Box)(() => ({
 
 export default function Home() {
   return (
-    <main>
-      <Container>
-        <Image
-          className="sm:!hidden"
-          src={backgroundMobile}
-          alt="Background image for Mobile"
-          width={1000}
-          height={1000}
-          style={{
-            position: 'absolute',
-            height: 'auto',
-            width: '100%',
-            maxWidth: 1280,
-            top: 120,
-          }}
-        />
-        <Image
-          className="!hidden sm:!flex 2xl:!hidden"
-          src={backgroundTablet}
-          alt="Background image for Mobile"
-          width={1000}
-          height={1000}
-          style={{
-            position: 'absolute',
-            height: 'auto',
-            width: '100%',
-            maxWidth: 1280,
-          }}
-        />
-        <Image
-          className="!hidden 2xl:!flex"
-          src={backgroundDesktop}
-          alt="Background image for Desktop"
-          width={1000}
-          height={1000}
-          style={{
-            position: 'absolute',
-            height: 'auto',
-            width: '100%',
-            maxWidth: 1340,
-          }}
-        />
-        {/* Desktop Logo */}
-        <Box
-          className="!hidden xl:!flex"
-          sx={{
-            position: 'absolute',
-            height: 200,
-            width: 700,
-            right: 0,
-            top: 0,
-            backgroundColor: '#000',
-          }}
-        />
-        <Image
-          className="!hidden xl:!flex"
-          src={decoderLogo}
-          alt="Decoder Logo"
-          width={580}
-          height={1000}
-          style={{
-            position: 'absolute',
-            height: 'auto',
-            width: 438,
-            right: 70,
-            top: 70,
-          }}
-        />
-        {/* Mobile Logo */}
-        <Box
-          className="xl:!hidden"
-          sx={{
-            position: 'absolute',
-            height: 120,
-            width: '100%',
-            top: 0,
-            backgroundColor: '#000',
-          }}
-        />
-        <Image
-          className="xl:!hidden"
-          src={decoderLogo}
-          alt="Decoder Logo"
-          width={1000}
-          height={1000}
-          style={{
-            position: 'absolute',
-            height: 'auto',
-            width: 250,
-            maxWidth: '100%',
-            top: 40,
-          }}
-        />
-        <Link
-          sx={{
-            position: 'absolute',
-            color: '#fff',
-            textDecoration: 'none',
-            right: 15,
-            bottom: 15,
-          }}
-          target="_blank"
-          href="https://www.rawpixel.com/image/3119802"
-        >
-          Image by rawpixel.com
-        </Link>
-      </Container>
-    </main>
+    <>
+      <title>Developer Profile | Debora</title>
+      <meta
+        name="description"
+        content="I am Debora, a Fullstack Developer and this is my Developer Profile. You will find here all my professional achievements and a little bit more about me."
+      />
+
+      <main>
+        <Container>
+          <Image
+            className="sm:!hidden"
+            src={backgroundMobile}
+            alt="Developer Profile background image for Mobile version"
+            width={1000}
+            height={1000}
+            style={{
+              position: 'absolute',
+              height: 'auto',
+              width: '100%',
+              maxWidth: 1280,
+              top: 120,
+            }}
+          />
+          <Image
+            className="!hidden sm:!flex 2xl:!hidden"
+            src={backgroundTablet}
+            alt="Developer Profile background image for Mobile version"
+            width={1000}
+            height={1000}
+            style={{
+              position: 'absolute',
+              height: 'auto',
+              width: '100%',
+              maxWidth: 1280,
+            }}
+          />
+          <Image
+            className="!hidden 2xl:!flex"
+            src={backgroundDesktop}
+            alt="Developer Profile background image for Desktop version"
+            width={1000}
+            height={1000}
+            style={{
+              position: 'absolute',
+              height: 'auto',
+              width: '100%',
+              maxWidth: 1340,
+            }}
+          />
+          {/* Desktop Logo */}
+          <Box
+            className="!hidden xl:!flex"
+            sx={{
+              position: 'absolute',
+              height: 200,
+              width: 700,
+              right: 0,
+              top: 0,
+              backgroundColor: '#000',
+            }}
+          />
+          <Image
+            className="!hidden xl:!flex"
+            src={decoderLogo}
+            alt="Developer Profile Logo"
+            width={580}
+            height={1000}
+            style={{
+              position: 'absolute',
+              height: 'auto',
+              width: 438,
+              right: 70,
+              top: 70,
+            }}
+          />
+          {/* Mobile Logo */}
+          <Box
+            className="xl:!hidden"
+            sx={{
+              position: 'absolute',
+              height: 120,
+              width: '100%',
+              top: 0,
+              backgroundColor: '#000',
+            }}
+          />
+          <Image
+            className="xl:!hidden"
+            src={decoderLogo}
+            alt="Developer Profile Logo"
+            width={1000}
+            height={1000}
+            style={{
+              position: 'absolute',
+              height: 'auto',
+              width: 250,
+              maxWidth: '100%',
+              top: 40,
+            }}
+          />
+          <Link
+            sx={{
+              position: 'absolute',
+              color: '#fff',
+              textDecoration: 'none',
+              right: 15,
+              bottom: 15,
+            }}
+            target="_blank"
+            href="https://www.rawpixel.com/image/3119802"
+          >
+            Image by rawpixel.com
+          </Link>
+        </Container>
+      </main>
+    </>
   )
 }
