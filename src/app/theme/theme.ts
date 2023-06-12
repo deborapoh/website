@@ -38,6 +38,15 @@ export const mobileTheme = createTheme({
             color: colors.secondaryMain,
           },
         },
+        {
+          props: {
+            variant: 'h4'
+          },
+          style: {
+            fontSize: 20,
+            color: colors.secondaryMain,
+          },
+        },
       ],
     },
   },
@@ -93,6 +102,15 @@ export const desktopTheme = createTheme({
           },
           style: {
             fontSize: 45,
+            color: colors.secondaryMain,
+          },
+        },
+        {
+          props: {
+            variant: 'h4'
+          },
+          style: {
+            fontSize: 28,
             color: colors.secondaryMain,
           },
         },

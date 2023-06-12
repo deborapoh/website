@@ -1,9 +1,10 @@
 'use client'
 
-import { Box, Divider as DividerMui, Link, Typography, styled } from "@mui/material"
+import { Box, Divider as DividerMui, Link, ThemeProvider, Typography, styled } from "@mui/material"
 
 import jobs from '../../jobs.json'
 import { header } from "@/app/constants"
+import { usePreferredTheme } from "@/app/utils/theme"
 
 const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -36,15 +37,6 @@ const Anchor = styled(Link)(({ theme }) => ({
   fontWeight: 'bold',
 }))
 
-const WhiteText = styled(Typography)(({ theme }) => ({
-  color: theme.palette.common.white,
-}))
-
-const PurpleText = styled(Typography)(({ theme }) => ({
-  color: theme.palette.secondary.main,
-  zIndex: 1,
-}))
-
 const Body = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey[50],
   marginTop: 32,
@@ -52,61 +44,73 @@ const Body = styled(Typography)(({ theme }) => ({
 }))
 
 export default function Resume() {
+  const theme = usePreferredTheme()
+
   return (
-    <Container
-      className={`
-        !px-[34px] 2xl:!px-[70px]
-        !items-center 2xl:!items-end
-        pt-[60px] 2xl:!pt-[28px]
-      `}
-    >
-      <PurpleText
+    <ThemeProvider theme={theme}>
+      <title>Work Experience | Debora</title>
+      <meta
+        name="description"
+        content="In this section you will see all the companies I have ever worked with in the field of technology"
+      />
+      <Container
         className={`
-          2xl:!hidden
-          !text-[35px]
-          !mb-[42px]
+          !px-[34px] 2xl:!px-[70px]
+          !items-center 2xl:!items-end
+          pt-[60px] 2xl:!pt-[28px]
         `}
-      >Resume</PurpleText>
-      {[...jobs]?.map((job) => {
-        return (
-          <JobContainer key={job.company.name} className="!items-center 2xl:!items-end">
-            <WhiteText
-              className={`
-                !text-center 2xl:!text-end
-                !text-[30px] 2xl:!text-[60px]
-              `}
-            >{job.title}</WhiteText>
-            <PurpleText
-              className={`
-                !text-[24px] 2xl:!text-[45px]
-                !text-center 2xl:!text-end
-              `}
-            >{job.period}</PurpleText>
-            <Body
-              className={`
-                !text-[20px] 2xl:!text-[28px]
-                !text-center 2xl:!text-end
-                !w-10/12 2xl:!w-11/12
-              `}
-            >
-              <PurpleText className="!text-[20px] 2xl:!text-[28px]">
-                {`${job.company.name} | `}
-                <Anchor href={job.company.website}>{job.company.website}</Anchor>
-              </PurpleText >
-              <b>{job.location}</b> <br />
-              {job.description.map((description) => (
-                <>
-                  {description}
-                  <br />
-                </>
-              ))}
+      >
+        <Typography className="!mb-[42px]" variant="h1">Resume</Typography>
+        {/* <Typography variant="h2">Debora de Oliveira</Typography>
+        <Typography variant="h3">{'< fullstack developer >'}</Typography> */}
+        {[...jobs]?.map((job) => {
+          return (
+            <JobContainer key={job.company.name} className="!items-center 2xl:!items-end">
+              <Typography className="!text-center 2xl:!text-end !mb-[16px]" variant="h2">{job.title}</Typography>
+              <Typography className="!text-center 2xl:!text-end !mb-[24px]" variant="h3">{job.period}</Typography>
+              <Typography
+                className="!text-center 2xl:!text-end"
+                variant="h4"
+              >
+                  {`${job.company.name} | `}
+                  <Anchor href={job.company.website}>{job.company.website}</Anchor>
+              </Typography>
+
+              <Body
+                className={`
+                  !text-[20px] 2xl:!text-[28px]
+                  !text-center 2xl:!text-end
+                  !w-10/12 2xl:!w-11/12
+                `}
+              >
+                {job.location} <br />
+                {job.description.map((description) => (
+                  <>
+                    {description}
+                    <br />
+                  </>
+                ))}
+              </Body>
               <br />
-              <PurpleText className="!text-[20px] 2xl:!text-[28px]">Softwares/Tools:</PurpleText>
-              {job.tools}
-            </Body>
-          </JobContainer>
-        )
-      })}
-    </Container>
+              <Typography
+                className="!text-center 2xl:!text-end"
+                variant="h4"
+              >
+                Softwares/Tools:
+              </Typography>
+              <Body
+                className={`
+                  !text-[20px] 2xl:!text-[28px]
+                  !text-center 2xl:!text-end
+                  !w-10/12 2xl:!w-11/12
+                `}
+              >
+                {job.tools}
+              </Body>
+            </JobContainer>
+          )
+        })}
+      </Container>
+    </ThemeProvider>
   )
 }

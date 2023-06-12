@@ -10,7 +10,7 @@
     "description": [
       "Job description:",
       "• Helped the team creating and improving a search engine tool;",
-      "• Implemented E2E and Unit Tests to make sure we had a good percentage of test coverage on front end and back end;",
+      "• Experience with E2E and Unit Tests to have a good percentage of test coverage on front end and back end;",
       "• Helped improve the NLP service using Spacy and Python."
     ],
     "tools": "TypeScript (NodeJS and ReactJS), NextJS, MaterialUI 5, Python, Poetry, Spacy, PostgreSQL, Prisma, Jest, Storybook, Sentry, SonarQube, Docker, CircleCI, Vercel, Datadog, AWS, Shortcut, Figma, Notion, Github.",
@@ -43,7 +43,7 @@
     "description": [
       "Job description:",
       "• I helped bootstrap the Ecommerce Customer Services Team and single handedly Customer Services and Logistics Assistance process automation using Rest APIs and Messaging Services as micro services;",
-      "• I have set up the Whatsapp API and built a chatbot for Customer Services;",
+      "• Experience setting up the Whatsapp API and built a chatbot for Customer Services;",
       "• Deployed applications using Docker Compose and Bitbucket pipelines in servers hosted at Azure."
     ],
     "tools": "JavaScript (NodeJS and ReactJS), Python, ExpressJS, Jest, Supertest, Nock, Sequelize, KafkaJS, Knex, Swagger, SQL Server, MongoDB, Kafka, Figma, Docker, Azure, Jira, Bitbucket.",

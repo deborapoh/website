@@ -32,7 +32,6 @@ const Body = styled(Typography)(({ theme }) => ({
 
 export default function About() {
   const theme = usePreferredTheme()
-  console.log('theme: ' + JSON.stringify(theme))
 
   return (
     <ThemeProvider theme={theme}>
