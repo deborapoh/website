@@ -5,7 +5,7 @@ import { ThemeProvider, CssBaseline, Box, styled, Link } from '@mui/material'
 import { RecoilRoot } from 'recoil'
 
 import './globals.css'
-import { lightTheme } from './theme/theme'
+import { desktopTheme } from './theme/theme'
 import Image from 'next/image'
 
 import githubLogo from './images/github.svg'
@@ -57,7 +57,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
       </head>
       <RecoilRoot>
-        <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={desktopTheme}>
           <CssBaseline />
           <body>
             <Container>
