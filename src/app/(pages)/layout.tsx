@@ -38,7 +38,7 @@ export default function PagesLayout({
         {pathname === '/about' && <Image
           className="!hidden 2xl:!flex"
           src={backgroundDesktopPhoto}
-          alt="description"
+          alt="About me background desktop photo"
           style={{
             position: 'absolute',
             height: 'auto',

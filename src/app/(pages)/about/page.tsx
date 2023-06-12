@@ -39,7 +39,7 @@ export default function About() {
       <title>About me | Debora</title>
       <meta
         name="description"
-        content="In this section you can get to know more about myself"
+        content="In this section you can get to know more about me"
       />
       <Container
         // px same as main layout header
@@ -57,7 +57,7 @@ export default function About() {
         <Image
           className="2xl:!hidden"
           src={backgroundMobilePhoto}
-          alt="description"
+          alt="About me background mobile photo"
           style={{
             height: 'auto',
             width: 360,
