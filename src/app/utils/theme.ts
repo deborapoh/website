@@ -4,7 +4,7 @@ import { desktopTheme, mobileTheme } from "../theme/theme"
 export const usePreferredTheme = (): Theme => {
   window.addEventListener('resize', () => {
     console.log('window.innerWidth', window.innerWidth)
-    if (window.innerWidth >= 1536) {
+    if (typeof window !== "undefined" && window.innerWidth >= 1536) {
       return desktopTheme
     }
 
