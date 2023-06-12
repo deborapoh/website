@@ -30,6 +30,12 @@ const PurpleText = styled(Typography)(({ theme }) => ({
 
 export default function Projects() {
   return (
+    <>
+      <title>Projects | Debora</title>
+      <meta
+        name="description"
+        content="In this section you will see some of the projects I've made, including freelance and personal projects."
+      />
       <Container
         className={`
           !flex-col 2xl:!flex-row
@@ -60,5 +66,6 @@ export default function Projects() {
           </Box>
         ))}
       </Container>
+    </>
   )
 }

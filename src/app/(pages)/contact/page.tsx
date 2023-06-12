@@ -31,6 +31,12 @@ const Body = styled(Typography)(({ theme }) => ({
 
 export default function Contact() {
   return (
+    <>
+      <title>Contact Information | Debora</title>
+      <meta
+        name="description"
+        content="Needing any software development here you will find my Contact information"
+      />
       <Container
         className={`
           !px-[34px] 2xl:!px-[70px]
@@ -42,7 +48,7 @@ export default function Contact() {
           className={`
             !text-[30px] 2xl:!text-[60px]
           `}
-        >Contact Info</WhiteText>
+        >Contact Information</WhiteText>
         <PurpleText
           className={`
             !text-[20px] 2xl:!text-[28px]
@@ -77,5 +83,6 @@ export default function Contact() {
           `}
         >(47) 99142-7504</Body>
       </Container>
+    </>
   )
 }
